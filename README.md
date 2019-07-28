@@ -26,3 +26,20 @@ arr.forEach((v) => {
   console.log(v)
 });
 ```
+
+### Array.includes
+
+- 배열이 특정 요소를 포함하고 있는지 판별한다.
+```JavaScript
+console.log( arr.includes(1) ); // true
+console.log( arr.includes(6) ); // false
+```
+
+## ETC
+
+### history.pushState
+
+- 주소 값을 바꿔준다.
+```JavaScript
+history.pushState({}, '', '/hello');
+```
