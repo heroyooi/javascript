@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "```JavaScript\r let arr = [1, 2, 3, 4, 5];\r ```",
+  "main": "forEach.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroyooi/javascript.git"
+  },
+  "author": "SungYeonWook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heroyooi/javascript/issues"
+  },
+  "homepage": "https://github.com/heroyooi/javascript#readme"
+}

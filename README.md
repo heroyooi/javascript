@@ -35,6 +35,14 @@ console.log( arr.includes(1) ); // true
 console.log( arr.includes(6) ); // false
 ```
 
+### Array.map
+
+- 배열 값을 조건에 맞춰서 변환시켜서 리턴해준다.
+```JavaScript
+let arr = [1, 2, 3, 4, 5];
+let result = arr.map((v) => v * 2);
+```
+
 ## ETC
 
 ### history.pushState
@@ -42,4 +50,11 @@ console.log( arr.includes(6) ); // false
 - 주소 값을 바꿔준다.
 ```JavaScript
 history.pushState({}, '', '/hello');
+```
+
+## Modules
+
+```command
+npm i nodemon -g
+nodemon app.js
 ```
