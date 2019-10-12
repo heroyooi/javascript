@@ -52,7 +52,12 @@ let result = arr.map((v) => v * 2);
 history.pushState({}, '', '/hello');
 ```
 
-### generator
+### 제네레이터
+
+- yield로 중단점 만들어주고, next로 재개함!
+- 함수를 중간에 멈출 수 있다.
+- 비동기를 자유자재로 컨트롤 할 수 있다.
+- yield가 async & await 보다 더 강력함
 ```JavaScript
 function* generator(){
   console.log(1);
@@ -77,6 +82,19 @@ gen2.next(); // {value: 2, done: false}
 gen2.next(); // {value: 3, done: false}
 gen2.next(); // {value: 4, done: false}
 gen2.next(); // {value: undefined, done: true}
+
+function* generator3(){
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+const gen3 = generator3();
+gen3.next(); // {value: 0, done: false}
+gen3.next(); // {value: 1, done: false}
+gen3.next(); // {value: 2, done: false}
+gen3.next(); // {value: 3, done: false}
+// 무한 반복도 컨트롤 가능
 ```
 
 ## Modules

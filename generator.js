@@ -35,3 +35,18 @@ gen2.next(); // {value: 2, done: false}
 gen2.next(); // {value: 3, done: false}
 gen2.next(); // {value: 4, done: false}
 gen2.next(); // {value: undefined, done: true}
+
+console.log('generator3() =====');
+
+function* generator3(){
+  let i = 0;
+  while (true) {
+    yield i++;
+  }
+}
+const gen3 = generator3();
+gen3.next(); // {value: 0, done: false}
+gen3.next(); // {value: 1, done: false}
+gen3.next(); // {value: 2, done: false}
+gen3.next(); // {value: 3, done: false}
+// 무한 반복도 컨트롤 가능
