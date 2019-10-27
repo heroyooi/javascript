@@ -35,6 +35,21 @@ console.log( arr.includes(1) ); // true
 console.log( arr.includes(6) ); // false
 ```
 
+### Array.filter
+
+- 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환한다.
+```JavaScript
+let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter(word => word.length > 6);
+
+console.log(result); // ['exuberant', 'destruction', 'present']
+
+let around = [-1, -1, -7, -1, -1, -7, -2, -1]
+const count = around.filter(v => [-7].includes(v)).length
+console.log(count); // 2
+```
+
+
 ### Array.map
 
 - 배열 값을 조건에 맞춰서 변환시켜서 리턴해준다.
