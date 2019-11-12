@@ -130,6 +130,16 @@ gen3.next(); // {value: 3, done: false}
 // 무한 반복도 컨트롤 가능
 ```
 
+### try, catch
+```JavaScript
+try {
+  JSON.parse(undefined)
+} catch (e) {
+  console.log(e)
+  console.log('에러났지만 안죽는다.')
+}
+```
+
 ## Modules
 
 ```command
