@@ -1,5 +1,19 @@
 # JavaSript REPOSITORY
 
+## 실전 예제 (Vue.js & React.js)
+
+### Vue.js Example
+```HTML
+<template>
+  <input ref="answer" minlength="4" maxlength="4" v-model="value" />
+</template>
+```
+```JavaScript
+const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환한다.
+```
+
+### React.js Example
+
 ## Array 객체 메서드
 
 ### Array.reduce
