@@ -9,7 +9,8 @@
 </template>
 ```
 ```JavaScript
-const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환한다.
+if (this.value === this.answer.join('')) {...} // this.answer가 [1,2,3,4]라면 join('')으로 1234로 만듦
+const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환
 ```
 
 ### React.js Example
