@@ -164,8 +164,18 @@ nodemon app.js
 
 ### 자바스크립트 심화
 
-a ?? b (널리시 코얼리싱)
+- a ?? b (널리시 코얼리싱)<br />
 a가 null 이나 undefined 이면 b
 
-a ?. b (옵셔널 체이닝)
+- a ?. b (옵셔널 체이닝)<br />
 a가 undefined가 아니면 a.b 아니면 undefined
+
+- 화살표 함수
+```JavaScript
+() => {
+  return {}
+}
+
+() => ({})
+```
+위 두개가 같음
