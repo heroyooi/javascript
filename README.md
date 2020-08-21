@@ -2,17 +2,6 @@
 
 ## 실전 예제 (Vue.js & React.js)
 
-### Vue.js Example
-```HTML
-<template>
-  <input ref="answer" minlength="4" maxlength="4" v-model="value" />
-</template>
-```
-```JavaScript
-if (this.value === this.answer.join('')) {...} // this.answer가 [1,2,3,4]라면 join('')으로 1234로 만듦
-const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환
-```
-
 ### React.js Example
 
 ## Array 객체 메서드
@@ -71,6 +60,55 @@ console.log(count); // 2
 ```JavaScript
 let arr = [1, 2, 3, 4, 5];
 let result = arr.map((v) => v * 2);
+```
+
+### Array.find & Array.findIndex
+
+```JavaScript
+const list = [
+  {id: 1, title: '1번째 게시글'},
+  {id: 2, title: '2번째 게시글'},
+  {id: 3, title: '3번째 게시글'},
+];
+
+list.find(list => list.id === 2);
+// {id: 2, title: "2번째 게시글"}
+list.findIndex(list => list.id === 2);
+// 1
+```
+
+### Array.splice
+
+```JavaScript
+const list1 = [
+  {id: 1, title: '1번째 게시글'}, {id: 2, title: '2번째 게시글'},
+  {id: 3, title: '3번째 게시글'}, {id: 4, title: '4번째 게시글'}
+];
+const list2 = [
+  {id: 5, title: '5번째 게시글'}, {id: 6, title: '6번째 게시글'}
+];
+
+list1.splice(2, 1); // 2번 index에서 하나를 자른다.(원본이 변함)
+// [{id: 3, title: "3번째 게시글"}]
+
+list1 // 원본이 변해있음
+// [
+//   {id: 1, title: '1번째 게시글'},
+//   {id: 2, title: '2번째 게시글'},
+//   {id: 4, title: '4번째 게시글'},
+// ];
+
+list2.splice(2, 0, ...list1); // 2번 index에서 0개를 자르고, list1의 요소들을 추구한다.(원본이 변함)
+// []
+
+list2 // 원본이 변해있음
+// [
+//   {id: 5, title: '5번째 게시글'},
+//   {id: 6, title: '6번째 게시글'},
+//   {id: 1, title: '1번째 게시글'},
+//   {id: 2, title: '2번째 게시글'},
+//   {id: 4, title: '4번째 게시글'},
+// ];
 ```
 
 ## ETC
@@ -179,3 +217,15 @@ a가 undefined가 아니면 a.b 아니면 undefined
 () => ({})
 ```
 위 두개가 같음
+
+
+### Vue.js Example
+```HTML
+<template>
+  <input ref="answer" minlength="4" maxlength="4" v-model="value" />
+</template>
+```
+```JavaScript
+if (this.value === this.answer.join('')) {...} // this.answer가 [1,2,3,4]라면 join('')으로 1234로 만듦
+const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환
+```
