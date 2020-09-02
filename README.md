@@ -4,7 +4,7 @@
 
 ### React.js Example
 
-## Array 객체 메서드
+## Array Method
 
 ### Array.reduce
 
@@ -110,6 +110,27 @@ list2 // 원본이 변해있음
 //   {id: 4, title: '4번째 게시글'},
 // ];
 ```
+
+## Object Method
+
+### Object.keys
+```JavaScript
+const user = {
+  id: 'heroyooi',
+  name: '성연욱',
+  age: 36,
+  password: 'qwert09!@#'
+};
+
+Object.keys(user); // ["id", "name", "age", "password"]
+
+Object.keys(user).forEach((key) => console.log(obj[key]));
+// heroyooi
+// 성연욱
+// 36
+// qwert09!@#
+```
+
 
 ## ETC
 
