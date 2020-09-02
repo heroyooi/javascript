@@ -124,7 +124,7 @@ const user = {
 
 Object.keys(user); // ["id", "name", "age", "password"]
 
-Object.keys(user).forEach((key) => console.log(obj[key]));
+Object.keys(user).forEach((key) => console.log(user[key]));
 // heroyooi
 // 성연욱
 // 36
