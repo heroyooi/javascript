@@ -104,7 +104,7 @@ async function process() {
 process();
 ```
 
-- 1. 다수의 Promise 처리 
+- 다수의 Promise 처리 예제
 ```JavaScript
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
