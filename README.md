@@ -1,8 +1,10 @@
-# JavaSript REPOSITORY
+# 자바스크립트 
 
-## Promise
+## 자바스크립트에서 비동기 처리 다루기
 
-### 특징 및 설명
+### Promise
+
+#### 특징 및 설명
 - 프로미스는 비동기 작업을 조금 더 편하게 처리할 수 있도록 ES6에 도입된 기능
 - 이전에는 비동기 작업을 처리할 때에는 콜백함수로 처리를 했었는데, 비동기 작업을 할 경우 콜백지옥을 만나게 됬었다.
 - 프로미스를 사용하면 콜백지옥을 방지할 수 있다.
@@ -54,14 +56,14 @@ increaseAndPrint(0)
   });
 ```
 
-### 단점
+#### 단점
 - 에러를 잡을 때 몇번째에서 발생했는지 알아내기도 어렵다.
 - 특정 조건에 따라 분기를 나누는 작업도 어렵고, 특정 값을 공유해가면서 작업을 처리하기도 까다롭다.
 - async/await을 사용하면, 이러한 문제점을 깔끔하게 해결할 수 있다.
 
-## async/await
+### async/await
 
-### 특징 및 설명
+#### 특징 및 설명
 - async/await 문법은 ES8에 해당하는 문법으로서, Promise를 더욱 쉽게 사용할 수 있게 해준다.
 
 ```JavaScript
@@ -194,9 +196,9 @@ async function process() {
 process();
 ```
 
-## Array Method
+### Array Method
 
-### Array.reduce
+#### Array.reduce
 
 ```JavaScript
 let arr = [1, 2, 3, 4, 5];
@@ -212,7 +214,7 @@ let result = arr.reduce((a, c) => a + c, 0);
 let result = arr.reduce((a, c) => a + c, 0) / arr.length || 0
 ```
 
-### Array.forEach
+#### Array.forEach
 
 - 배열 값을 하나씩 조회한다.
 ```JavaScript (forEach.js)
@@ -221,7 +223,7 @@ arr.forEach((v) => {
 });
 ```
 
-### Array.includes
+#### Array.includes
 
 - 배열이 특정 요소를 포함하고 있는지 판별한다.
 ```JavaScript
@@ -229,7 +231,7 @@ console.log( arr.includes(1) ); // true
 console.log( arr.includes(6) ); // false
 ```
 
-### Array.filter
+#### Array.filter
 
 - 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환한다.
 ```JavaScript
@@ -244,7 +246,7 @@ console.log(count); // 2
 ```
 
 
-### Array.map
+#### Array.map
 
 - 배열 값을 조건에 맞춰서 변환시켜서 리턴해준다.
 ```JavaScript
@@ -252,7 +254,7 @@ let arr = [1, 2, 3, 4, 5];
 let result = arr.map((v) => v * 2);
 ```
 
-### Array.find & Array.findIndex
+#### Array.find & Array.findIndex
 
 ```JavaScript
 const list = [
@@ -267,7 +269,7 @@ list.findIndex(list => list.id === 2);
 // 1
 ```
 
-### Array.splice
+#### Array.splice
 
 ```JavaScript
 const list1 = [
@@ -301,9 +303,9 @@ list2 // 원본이 변해있음
 // ];
 ```
 
-## Object Method
+### Object Method
 
-### Object.keys
+#### Object.keys
 ```JavaScript
 const user = {
   id: 'heroyooi',
@@ -322,9 +324,9 @@ Object.keys(user).forEach((key) => console.log(user[key]));
 ```
 
 
-## ETC
+### ETC
 
-### Spread Syntax (전개구문)
+#### Spread Syntax (전개구문)
 
 - 객체나 배열의 불변성을 지켜주기 위해 전개 구문을 사용한다.
 ```JavaScript
@@ -342,14 +344,14 @@ const f = [...d];
 console.log(f, d, f === d); // false - d의 불변성 유지 O
 ```
 
-### history.pushState
+#### history.pushState
 
 - 주소 값을 바꿔준다.
 ```JavaScript
 history.pushState({}, '', '/hello');
 ```
 
-### 제네레이터
+#### 제네레이터
 
 - yield로 중단점 만들어주고, next로 재개함!
 - 함수를 중간에 멈출 수 있다.
@@ -394,7 +396,7 @@ gen3.next(); // {value: 3, done: false}
 // 무한 반복도 컨트롤 가능
 ```
 
-### try, catch
+#### try, catch
 ```JavaScript
 try {
   JSON.parse(undefined)
@@ -402,13 +404,6 @@ try {
   console.log(e)
   console.log('에러났지만 안죽는다.')
 }
-```
-
-## Modules
-
-```command
-npm i nodemon -g
-nodemon app.js
 ```
 
 ### 자바스크립트 심화
