@@ -1,8 +1,66 @@
 # JavaSript REPOSITORY
 
-## 실전 예제 (Vue.js & React.js)
+## Promise
 
-### React.js Example
+### 특징 및 설명
+- 프로미스는 비동기 작업을 조금 더 편하게 처리할 수 있도록 ES6에 도입된 기능
+- 이전에는 비동기 작업을 처리할 때에는 콜백함수로 처리를 했었는데, 비동기 작업을 할 경우 콜백지옥을 만나게 됬었다.
+- 프로미스를 사용하면 콜백지옥을 방지할 수 있다.
+
+- 1초 뒤에 성공 혹은 에러를 내는 상황
+```JavaScript
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(1); // 성공(resolve) 테스트
+    // reject(new Error()); // 에러(reject) 테스트
+  }, 1000);
+});
+
+myPromise
+  .then(n => {
+    console.log(n);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+
+- 4번 성공하고, 5번째 에러나는 상황
+```JavaScript
+function increaseAndPrint(n) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const value = n + 1;
+      if (value === 5) {
+        const error = new Error();
+        error.name = 'ValueIsFiveError';
+        reject(error);
+        return;
+      }
+      console.log(value);
+      resolve(value);
+    }, 1000);
+  });
+}
+
+increaseAndPrint(0)
+  .then(increaseAndPrint)
+  .then(increaseAndPrint)
+  .then(increaseAndPrint)
+  .then(increaseAndPrint)
+  .then(increaseAndPrint)
+  .catch(e => {
+    console.error(e);
+  });
+```
+
+### 단점
+- 에러를 잡을 때 몇번째에서 발생했는지 알아내기도 어렵다.
+- 특정 조건에 따라 분기를 나누는 작업도 어렵고, 특정 값을 공유해가면서 작업을 처리하기도 까다롭다.
+- async/await을 사용하면, 이러한 문제점을 깔끔하게 해결할 수 있다.
+
+```JavaScript
+```
 
 ## Array Method
 
