@@ -433,5 +433,7 @@ a가 undefined가 아니면 a.b 아니면 undefined
 ```
 ```JavaScript
 if (this.value === this.answer.join('')) {...} // this.answer가 [1,2,3,4]라면 join('')으로 1234로 만듦
-const answerArray = this.value.split('').map(v => parseInt(v)); // answerArray는 1234 입력하면 [1,2,3,4] 로 반환
+const answerArray = this.value.split('').map(v => parseInt(v));
+// answerArray는 1234 입력하면 this.value.split('')로 인하여 '1234' 문자가 ['1','2','3','4']로 바뀌며,
+// map(v => parseInt(v)) 로 인하여 문자로 구성된 배열이 숫자로 구성된 [1,2,3,4]로 반환된다.
 ```
