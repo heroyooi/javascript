@@ -323,6 +323,11 @@ Object.keys(user).forEach((key) => console.log(user[key]));
 // qwert09!@#
 ```
 
+#### Object.entries
+```JavaScript
+const obj = { foo: 'bar', baz: 42 };
+console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+```
 
 ### ETC
 
